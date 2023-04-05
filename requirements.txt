@@ -3,4 +3,5 @@ streamlit
 pandas
 difflib
 SequenceMatcher
-Python <3.5
+python<=3.5
+scikit-learn>=0.14.1,<1.0.0
