@@ -4,7 +4,3 @@ pandas
 SequenceMatcher<=3.0.7
 difflib<=3.3.0
 scikit-learn>=0.14.1,<1.0.0
-GitPython==3.1.12
-ipython==7.19.0
-ipython-genutils==0.2.0
-python-dateutil==2.8.1
