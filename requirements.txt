@@ -1,6 +1,6 @@
 openpyxl
 streamlit
 pandas
-scikit-learn==0.22.2
 difflib
 SequenceMatcher
+Python <3.5
