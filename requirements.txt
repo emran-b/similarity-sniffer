@@ -1,6 +1,6 @@
 openpyxl
 streamlit
 pandas
-SequenceMatcher<=3.0.7
+SequenceMatcher=1.0.3
 difflib<=3.3.0
 scikit-learn>=0.14.1,<1.0.0
