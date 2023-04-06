@@ -13,8 +13,6 @@ st.markdown("by Emran Bahadur")
 # Subheader
 st.subheader("This app allows you to upload an excel file,iterate through each row comparing the PLP Copy and calculating a % similarity score.")
 
-st.write("Upload an excel file")
-
 # get the upload file
 uploaded_file = st.file_uploader("Choose an Excel file", type="xlsx")
 
@@ -51,7 +49,17 @@ similarity_threshold = st.number_input("Please enter a similarity score to filte
 #Filter the results to only include matches with a similarity above the user set threshold
 filtered_results = results_df[results_df['Similarity'] >= similarity_threshold]
 
-if st.button('Download Filtered Results'):
-    filtered_results.to_excel("final-output.xlsx", index=False)
-    st.success('Downloaded Filtered Results')
+# Save the filtered results to a CSV file
+file_data = filtered_results.to_csv(index=False)
+
+# Create a download link for the CSV file
+download_button = st.download_button(
+    label="Download CSV File",
+    data=file_data,
+    file_name="Similarity_Sniffer.csv",
+    mime="text/csv",
+)
+
+if download_button:
+    st.success('File downloaded to local storage')
     st.balloons()
