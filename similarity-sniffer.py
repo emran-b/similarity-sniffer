@@ -12,6 +12,8 @@ st.markdown("###### by Emran Bahadur")
 # Subheader
 st.markdown("#### This app allows you to upload an excel file,iterate through each row comparing the PLP Copy and calculating a % similarity score.")
 
+st.write("File format should contain two columns with a header row, label the columns as URL and PLP Copy")
+
 # Setup file upload
 uploaded_file = st.sidebar.file_uploader(label="Upload your Excel file", type = ['csv','xlsx'])
     
